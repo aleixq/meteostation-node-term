@@ -157,14 +157,14 @@ void setup() {
 
     tft.begin();
     touch.begin(tft.width(), tft.height());  // Must be done before setting rotation
-    tft.setRotation(1);
+    tft.setRotation(3);
     rowSize = tft.height() / 5;
     columnSize = (tft.width() - margin) / 6;
     Serial.print("tftx ="); Serial.print(tft.width()); Serial.print(" tfty ="); Serial.println(tft.height());
     tft.fillScreen(ILI9341_BLACK);
     // Replace these for your screen module
     touch.setCalibration(209, 1759, 1775, 273); // it's set in portrait
-    touch.setRotation(touch.ROT90);
+    touch.setRotation(touch.ROT270);
 
     // WIFI PART
     // We start by connecting to a WiFi network

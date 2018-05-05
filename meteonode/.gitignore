@@ -1,0 +1,9 @@
+wifi-credentials.h
+.directory
+*.creator
+*.creator.user
+*.creator.shared
+*.files
+*.includes
+*.config
+Makefile

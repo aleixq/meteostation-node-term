@@ -28,3 +28,19 @@ Explained in respective project directory.
 # TODO
 Add 3d freecad files for cases. 
 Add fritzing connections.
+Move functions to own classes(as is separated) (yes i have to fulfill the transition from ino to cpp, but this project once upon a time was a simple ino file).
+Use E-Ink display in meteoterm to save energy.
+Use battery on meteoterm.
+Transition to a less energy drainer putting nodemcu in sleep mode, and relax the polling.
+
+# Kudos
+big kudos to authors of: 
+- Great bme library, from which I have copy some code https://github.com/finitespace/BME280 .
+- Another zambretti based forecaster https://github.com/hes19073/hesweewx/blob/0415b182d2318f85cefb9727da630fbe42fab9c9/bin/user/forecast.py 
+- A great forecaster https://github.com/fandonov/weatherstation , including zambretti interpretation.
+- Zambretti js code of http://www.beteljuice.co.uk/zambretti/forecast.html (the inspiration and the basis of the forecast algorithm in meteoterm.
+- Zambretti first forecaster: https://web.archive.org/web/20110610213848/http://www.meteormetrics.com/zambretti.htm
+- Ntp code from https://www.geekstips.com/arduino-time-sync-ntp-server-esp8266-udp/
+- Great timelib libs: https://github.com/PaulStoffregen/Time 
+- Great GFX code from adafruit https://learn.adafruit.com/adafruit-gfx-graphics-library 
+

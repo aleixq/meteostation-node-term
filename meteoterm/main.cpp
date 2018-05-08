@@ -388,7 +388,7 @@ void loop() {
             char timeStr[5];
             sprintf(timeStr, "%02d:%02d", hour(lastSecond), minute(lastSecond));
             tft.print(timeStr);
-            delay(2000);
+            //delay(2000);
 
             lastSecond = now();
         }

@@ -58,7 +58,7 @@ void barGraph(Adafruit_ILI9341 tft, int x, int y, int w, float h, int smpls, Wea
   int relative_y = y + h;
   //Print concurrent baro to tft
   char buffer[6] = " ";
-  tft.drawRect(x, y, w, h, ILI9341_BLACK);
+  tft.fillRect(x, y, w, h, ILI9341_BLACK);
 
   for (int i = 0; i < smpls; i++) {
     //Serial.println(history[i].pressio);
@@ -221,7 +221,7 @@ void forecastGraph(Adafruit_ILI9341 tft, int x, int y, int w, int h, int forecas
     int center_pos_x = x + ((w - 92) / 2);
     int center_pos_y = y + ((h - 92) / 2);
 
-    tft.drawRect(center_pos_x, center_pos_y, 92, 92,  ILI9341_BLACK);
+    tft.fillRect(center_pos_x, center_pos_y, 92, 92,  ILI9341_BLACK);
 
     if (forecast_id == 0 or forecast_id == 1) {
         //SUN

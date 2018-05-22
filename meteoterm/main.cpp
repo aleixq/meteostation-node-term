@@ -58,7 +58,7 @@ float temperaturac = 0; //  [temperature C]
 float dewPoint;
 float barometer_mB = 1020.0;
 float pressio = 0;
-float windspeedms = 0;
+float windspeedkph = 0;
 int windgustdir = 0; // [0-360 using software specific time period]
 float rainin = 0; // [rain inches over the past hour)] -- the accumulated rainfall in the past 60 min
 volatile float dailyrainin = 0; // [rain inches so far today in local time]
@@ -293,7 +293,7 @@ void loop() {
                 dewPoint = root_0["dew_point"];
                 humitat = root_0["humitat"];
                 pressio = root_0["pressio"];
-                windspeedms = root_0["wind_speed"];
+                windspeedkph = root_0["wind_speed"];
                 windgustdir = root_0["wind_deg"];
                 rainin = root_0["rain_1h"];
                 dailyrainin = root_0["rain_24h"];
@@ -351,7 +351,7 @@ void loop() {
             forecastGraph(tft, 0,0,columnSize*2,rowSize*3, forecast_id);
 
             windgustdir = windgustdir + 45;
-            windDir(tft, 0, rowSize*3, columnSize*2, rowSize*2, windgustdir, windspeedms);
+            windDir(tft, 0, rowSize*3, columnSize*2, rowSize*2, windgustdir, windspeedkph);
 
             tft.setTextColor(ILI9341_ORANGE,ILI9341_BLACK);
             heading(tft, columnSize*2, 0, 3.5, 0, "temperatura", temperaturac);
@@ -365,7 +365,7 @@ void loop() {
             heading(tft, columnSize *4, rowSize, 2, 5, "punt rosada", dewPoint);
 
             tft.setTextColor(ILI9341_GREEN,ILI9341_BLACK);
-            heading(tft, columnSize*2, rowSize * 2, 2, 0, "vent(m/s)", windspeedms);
+            heading(tft, columnSize*2, rowSize * 2, 2, 0, "vent(km/h)", windspeedkph);
             heading(tft, columnSize * 4, rowSize * 2, 2, 0, "direccio", windgustdir);
 
             tft.setTextColor(ILI9341_BLUE,ILI9341_BLACK);
